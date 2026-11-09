@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Powiadomienia (Android 13+): prosimy w czasie działania, nie zakładamy, że jest przyznane. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Dokładne alarmy: przyznawane automatycznie dla aplikacji kalendarz/alarm (instalacja poza Google Play). -->
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <!-- Ponowne zaplanowanie przypomnień po restarcie telefonu. -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- Most do Szczur Media Bar (uprawnienie signature definiowane przez Media Bar >= 1.1.0). -->
+    <uses-permission android:name="com.szczurek9.mediabar.permission.REMINDER_BRIDGE" />
+
+    <queries>
+        <package android:name="com.szczurek9.mediabar" />
+    </queries>
+
+    <application
+        android:name=".ReminderApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SzczurReminder">
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Alarm przypomnienia (AlarmManager). Tylko własne PendingIntent-y. -->
+        <receiver
+            android:name=".receivers.AlarmReceiver"
+            android:exported="false" />
+
+        <!-- Akcje "Wykonane" / "Przypomnij później" z powiadomienia i z paska Media Bar. -->
+        <receiver
+            android:name=".receivers.ActionReceiver"
+            android:exported="false" />
+
+        <!-- Restart, aktualizacja aplikacji, zmiana czasu i strefy czasowej: odtwarza alarmy. -->
+        <receiver
+            android:name=".receivers.BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

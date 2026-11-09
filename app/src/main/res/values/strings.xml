@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">szczur reminder</string>
+    <string name="channel_alert_name">Przypomnienia</string>
+    <string name="channel_alert_desc">Przypomnienia z banerem i dźwiękiem (tryb standalone lub gdy Media Bar jest niedostępny)</string>
+    <string name="channel_bar_name">Przypomnienia (z paskiem Media Bar)</string>
+    <string name="channel_bar_desc">Przypomnienia pokazane na pasku Media Bar – wpis w centrum powiadomień bez banera</string>
+</resources>

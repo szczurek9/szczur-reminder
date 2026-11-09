@@ -1,0 +1,1 @@
+# Minifikacja wyłączona – brak reguł.
