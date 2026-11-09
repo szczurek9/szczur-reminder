@@ -15,8 +15,8 @@ Zmiana trybu nie gubi przypomnień, nie dubluje alarmów i nie wymaga konfigurac
 
 | Ekran | Podgląd |
 | :--- | :---: |
-| **Lista przypomnień**<br>Kafelki posortowane po terminie; nadchodzące, przeterminowane i wykonane wyraźnie odróżnione. | <img src="screenshots/list.jpg" alt="Lista przypomnień" width="320" /> |
-| **Nowe przypomnienie**<br>Tytuł, opis z podglądem Markdown, data, godzina i moment powiadomienia. | <img src="screenshots/editor.jpg" alt="Edytor" width="320" /> |
+| **Lista przypomnień**<br>Kafelki posortowane po terminie; nadchodzące, przeterminowane i wykonane wyraźnie odróżnione. | <img src="screenshots/list.png" alt="Lista przypomnień" width="320" /> |
+| **Nowe przypomnienie**<br>Tytuł, opis z podglądem Markdown, data, godzina i moment powiadomienia. | <img src="screenshots/editor.png" alt="Edytor" width="320" /> |
 | **Media Bar – karta kompaktowa**<br>Przypomnienie na pasku Szczur Media Bar. | <img src="screenshots/mediabar-compact.jpg" alt="Media Bar – kompaktowa" width="320" /> |
 | **Media Bar – karta rozwinięta**<br>Pełny opis z Markdownem oraz przyciski akcji. | <img src="screenshots/mediabar-expanded.jpg" alt="Media Bar – rozwinięta" width="320" /> |
 | **Powiadomienie Androida**<br>Tryb bez Media Bar: „Wykonane” i „Odłóż”. | <img src="screenshots/notification.jpg" alt="Powiadomienie" width="320" /> |
